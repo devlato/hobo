@@ -1,0 +1,27 @@
+{
+  "apps": [{
+    "name": "Server",
+    "exec_interpreter": "node",
+    "script": "./server/run.js",
+    "cwd": ".",
+    "args": ["--dev"],
+    "watch": ["server", "webpack", "package.json", "pm2.development.json"],
+    "ignore_watch": ["server/runtime", "server/templates", "webpack/webpack.production.js", "mock"],
+    "watch_options": {
+      "persistent": true,
+      "follow_symlinks": true
+    },
+    "log_date_format"  : "YYYY/MM/DD HH:mm Z",
+    "node_args": ["--harmony"],
+    "error_file": "runtime/logs/stderr.log",
+    "out_file": "runtime/logs/stdout.log",
+    "instances": 1,
+    "exec_mode": "fork",
+    "max_memory_restart": "1536M",
+    "autorestart": true,
+    "merge_logs": true,
+    "env": {
+      "NODE_ENV": "development"
+    }
+  }]
+}

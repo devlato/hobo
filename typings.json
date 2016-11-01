@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "lodash": "registry:npm/lodash#4.0.0+20160416211519",
+    "ramda": "registry:npm/ramda#0.21.0+20160531162943"
+  }
+}

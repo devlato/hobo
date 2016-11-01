@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+.tmp
+.idea
+public
+*.DS_Store
+*.rdb
+webpack-build-stats.json
+api_test_report.xml

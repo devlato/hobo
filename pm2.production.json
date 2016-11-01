@@ -1,0 +1,41 @@
+{
+  "apps": [{
+    "name": "Server instance @8095",
+    "exec_interpreter": "node",
+    "script": "./public/assets/app.server.js",
+    "cwd": ".",
+    "args": ["--prod", "--port=8095"],
+    "watch": false,
+    "log_date_format": "YYYY/MM/DD HH:mm Z",
+    "node_args": ["--harmony"],
+    "error_file": "runtime/logs/stderr.log",
+    "out_file": "runtime/logs/stdout.log",
+    "instances": 1,
+    "exec_mode": "fork_mode",
+    "max_memory_restart": "2048M",
+    "autorestart": true,
+    "merge_logs": true,
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }, {
+    "name": "Server instance @8096",
+    "exec_interpreter": "node",
+    "script": "./public/assets/app.server.js",
+    "cwd": ".",
+    "args": ["--prod", "--port=8096"],
+    "watch": false,
+    "log_date_format": "YYYY/MM/DD HH:mm Z",
+    "node_args": ["--harmony"],
+    "error_file": "runtime/logs/stderr.log",
+    "out_file": "runtime/logs/stdout.log",
+    "instances": 1,
+    "exec_mode": "fork_mode",
+    "max_memory_restart": "2048M",
+    "autorestart": true,
+    "merge_logs": true,
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }]
+}

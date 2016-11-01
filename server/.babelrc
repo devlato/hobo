@@ -1,0 +1,23 @@
+{
+  "presets": [
+    "node5",
+    "es2015",
+    "stage-0",
+    "react"
+  ],
+  "plugins": [
+    "transform-class-properties",
+    "add-module-exports",
+    "transform-es2015-modules-commonjs",
+    ["typecheck", {
+      "disable": {
+        "production": true
+      }
+    }],
+    ["babel-root-import", {
+      "rootPathPrefix": "@",
+      "rootPathSuffix": "server"
+    }],
+    "transform-decorators-legacy"
+  ]
+}

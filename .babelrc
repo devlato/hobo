@@ -1,0 +1,108 @@
+{
+  "presets": [
+    "node6",
+    "es2015",
+    "react",
+    "stage-0"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "add-module-exports",
+        [
+          "typecheck",
+          {
+            "disable": {
+              "production": true
+            }
+          }
+        ],
+        [
+          "react-transform",
+          {
+            "transforms": [
+              {
+                "transform": "react-transform-hmr",
+                "imports": [
+                  "react"
+                ],
+                "locals": [
+                  "module"
+                ]
+              },
+              {
+                "transform": "react-transform-catch-errors",
+                "imports": [
+                  "react",
+                  "redbox-react"
+                ]
+              }
+            ]
+          }
+        ],
+        [
+          "babel-root-import",
+          {
+            "rootPathPrefix": "@",
+            "rootPathSuffix": "server"
+          }
+        ],
+        "transform-decorators-legacy"
+      ]
+    },
+    "test": {
+      "plugins": [
+        "add-module-exports",
+        [
+          "typecheck",
+          {
+            "disable": {
+              "production": true
+            }
+          }
+        ],
+        [
+          "babel-root-import",
+          {
+            "rootPathPrefix": "@",
+            "rootPathSuffix": "server"
+          }
+        ],
+        "transform-decorators-legacy"
+      ]
+    }
+  },
+  "plugins": [
+    [
+      "add-module-exports",
+      "typecheck",
+      {
+        "disable": {
+          "production": true
+        }
+      }
+    ],
+    [
+      "react-transform",
+      {
+        "transforms": [
+          {
+            "transform": "react-transform-catch-errors",
+            "imports": [
+              "react",
+              "redbox-react"
+            ]
+          }
+        ]
+      }
+    ],
+    [
+      "babel-root-import",
+      {
+        "rootPathPrefix": "@",
+        "rootPathSuffix": "server"
+      }
+    ],
+    "transform-decorators-legacy"
+  ]
+}
